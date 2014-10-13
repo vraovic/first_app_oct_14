@@ -33,7 +33,11 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc','0.3.20', require: false
 end
-
+# This is added to deploy at Heroku
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
